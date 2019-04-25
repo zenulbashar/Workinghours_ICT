@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2019 at 11:36 AM
+-- Generation Time: Mar 28, 2019 at 05:29 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `roster`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_mst`
+--
+
+CREATE TABLE `admin_mst` (
+  `id` int(20) NOT NULL,
+  `admin_name` varchar(30) NOT NULL,
+  `admin_email` varchar(30) NOT NULL,
+  `admin_password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_mst`
+--
+
+INSERT INTO `admin_mst` (`id`, `admin_name`, `admin_email`, `admin_password`) VALUES
+(1, 'abc', 'abc@gmail.com', 'abc123');
 
 -- --------------------------------------------------------
 
@@ -52231,6 +52251,12 @@ INSERT INTO `tbl_contact` (`id`, `name`, `email`, `subject`, `message`) VALUES
 --
 
 --
+-- Indexes for table `admin_mst`
+--
+ALTER TABLE `admin_mst`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `city`
 --
 ALTER TABLE `city`
@@ -52304,6 +52330,12 @@ ALTER TABLE `tbl_contact`
 --
 
 --
+-- AUTO_INCREMENT for table `admin_mst`
+--
+ALTER TABLE `admin_mst`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `city`
 --
 ALTER TABLE `city`
@@ -52349,7 +52381,7 @@ ALTER TABLE `feedback_employees`
 -- AUTO_INCREMENT for table `roster_mst`
 --
 ALTER TABLE `roster_mst`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `state`
