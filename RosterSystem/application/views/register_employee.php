@@ -9,7 +9,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
-<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!--<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />-->
 <!-- Custom CSS -->
 <link href="<?php echo base_url();?>assets/css/style.css" rel='stylesheet' type='text/css' />
 <link href="<?php echo base_url();?>assets/css/font-awesome.css" rel="stylesheet"> 
@@ -19,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <!---//webfonts--->  
 <!-- Bootstrap Core JavaScript -->
-<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+<!--<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>-->
 </head>
 <body id="login">
   
@@ -44,8 +44,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   <input type="text" class="form-control1" name="experience" placeholder="Experience" autofocus="">
 	    Image<input type="file" class="form-control1" name="userfile" placeholder="Image" autofocus="">
 		 <input type="text" class="form-control1" name="prev_job_at" placeholder="Previous Job At" autofocus="">
-		 <select name="company_to_join" class="form-control">
-			<option value="">CLICK TO EXPAND</option>
+		 company to join<select name="company_to_join" class="form-control"> 
+			
 		 <?php foreach($result->result() as $row){?>
 			<option value="<?php echo $row->company_name;?>"><?php echo $row->company_name;?></option>
 		 <?php } ?>

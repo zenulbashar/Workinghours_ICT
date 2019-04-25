@@ -25,14 +25,10 @@
     <link href="//fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 </head>
-
 <body>
-
-    <header>
-	
-        <h2 class="text-center;font-size=30px;" style="color:red;">Welcome!! <?php echo $this->session->userdata('employee_fname');?> Your Home Page</h2>
-		<img style="float: right;margin-top: -105px;border-radius: 20%;width: 8%;margin-right: 13;" width="100px"src="<?php echo base_url('uploads/');?><?php echo $this->session->userdata('employee_image'); ?>">
-		<h3 class="alert alert-primary" ><?php echo $this->session->flashdata('updated'); ?></h3>
+  <header>
+        <h2 class="text-center;font-size=30px;" style="color:red;">Welcome!! <?php echo $this->session->userdata('company_name');?> To Your Home</h2>
+		
     </header>
     <div id="wrapper">
         <div id="multiple">
@@ -126,5 +122,4 @@
     </script>
     <!-- //script for calendar -->
 </body>
-
 </html>

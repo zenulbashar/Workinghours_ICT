@@ -26,63 +26,55 @@
 
 <body>
     <header>
-        <h2 class="text-center;font-size=30px;" style="color:red;">Welcome!! <?php echo $this->session->userdata('employee_fname');?> Your Incident Report Page</h2>
+        <h2 class="text-center;font-size=30px;" style="color:red;">Welcome!! <?php echo $this->session->userdata('employee_fname');?> To Your Profile Page</h2>
 		<img style="float: right;margin-top: -105px;border-radius: 20%;width: 8%;margin-right: 13;" width="100px"src="<?php echo base_url('uploads/');?><?php echo $this->session->userdata('employee_image'); ?>">
     </header>
 	<!--background-->
-	<h1 style="color:red;font-family:times new roman;text-shadow:2px 5px 3px black">Incident Report Form</h1>
+	<h1 style="color:red;font-family:times new roman;text-shadow:2px 5px 3px black">Profile</h1>
 	<div class="main-w3layouts-content">
 		<div class="top-section">
-			<h2 class="sub-hdng-agileits-w3layouts">Report Us</h2>
-			<p>Please fill the form below about the incident</p>
+			<h2 class="sub-hdng-agileits-w3layouts">View Of Your Profile</h2>
+			<p>Click edit to change profile information</p>
 		</div>
 		<div class="w3-agile-login-form">
+		<?php foreach($res as $row) { ?>
 			<form action="<?php echo base_url();?>index.php/Welcome/addIncident" method="post" >
-				<h3 class="inner-hdng-agileinfo">Contact information</h3>
+			<h3 class="inner-hdng-agileinfo">Profile Picture</h3>
+				<img  style="border-radius: 20%;width: 200px;" width="200px" src="<?php echo base_url('uploads/');?><?php echo $row->employee_image; ?>">
+				<h3 class="inner-hdng-agileinfo">General information</h3>
 				<div class="top-fields-wthree">
 					<div class="input-fields-w3ls">
-						<input type="hidden" name="employee_id" value="1">
-						<input type="text" name="employee_name" placeholder="Employee Name" required="" />
+						<input type="hidden" name="employee_id" value="<?php echo $this->session->userdata('employee_id');?>">
+						<input type="text" name="employee_name" value="<?php echo $row->employee_fname; ?>" readonly="true" />
 					</div>
 					<div class="input-fields-w3ls">
-						<input type="email" name="employee_email" placeholder="Employee Email" required="" />
+						<input type="email" name="employee_email" value="<?php echo $row->employee_lname; ?>" readonly="true" />
 					</div>
 					<div class="input-fields-w3ls">
-						<input type="text" name="employee_contactNo" placeholder="Phone" required="" />
+						<input type="text" name="employee_contactNo" value="<?php echo $row->birth_date; ?>" readonly="true" />
 					</div>
 				</div>
-				<h3 class="inner-hdng-agileinfo">Company Information</h3>
+				<h3 class="inner-hdng-agileinfo">Contact Information</h3>
 				<div class="top-fields-wthree">
 					<div class="input-fields-w3ls">
-						<input type="text" name="company_name" placeholder="Company Name" required="" />
+						<input type="text" name="company_name" value="<?php echo $row->employee_gender; ?>" readonly="true" />
 					</div>
 					<div class="input-fields-w3ls">
-						<input type="email" name="company_email" placeholder="Company Email" required="" />
+						<input type="email" name="company_email" value="<?php echo $row->employee_email; ?>" readonly="true" />
 					</div>
 					<div class="input-fields-w3ls">
-						<input type="text" name="company_location" placeholder="Company Location" required="" />
+						<input type="text" name="company_location" value="<?php echo $row->employee_password; ?>" readonly="true" />
 					</div>
 				</div>
-				<h3 class="inner-hdng-agileinfo">About Incident</h3>
+				<h3 class="inner-hdng-agileinfo">Address Information</h3>
 				<div class="mid-fields-agileits-w3layouts">
-					<div class="input-fields-w3ls2">
-						<input id="datepicker" name="date_Incident" type="date" placeholder="Date of Incident" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
-						    required="" />
-					</div>
-					<div class="input-fields-w3ls2">
-						<select id="country" name="level_Incident" onchange="change_country(this.value)" class="frm-field required" required="">
-							<option value="">Incident level</option>
-							<option value="High">High</option>
-							<option value="Medium">Medium</option>   
-							<option value="Low">Low</option>     
-						</select>
-
-					</div>
+							<textarea name="description_Incident" value="<?php echo $row->employee_address; ?>" readonly="true"><?php echo $row->employee_address; ?></textarea>
+					
 				</div>
-				<textarea name="description_Incident" placeholder="Description of Incident" required=""></textarea>
-				<textarea name="location_Incident" placeholder="Location of Incident" required=""></textarea>
-				<input type="submit" value="Report Now">
+	
+				<a href="<?php echo base_url();?>index.php/Welcome/EditProfile/?employee_id=<?php echo $this->session->userdata('employee_id');?>">Edit Profile</a>
 			</form>
+		<?php } ?>
 		</div>
 	</div>
 	<div class="clear"></div>

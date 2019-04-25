@@ -27,7 +27,7 @@
 	<!-- titles -->
 	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 	<!-- body -->
-	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets2// fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
 </head>
 
 <body>
@@ -68,23 +68,32 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav text-center  ml-lg-auto">
-						<li class="nav-item active  mr-3">
+						<li class="nav-item  mr-3">
 							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/employeeView">Employee
 								
 							</a>
 						</li>
 						<li class="nav-item  mr-3">
-							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/employeeView">Roster Page
-								
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadRosterEmployee?employee_id=<?php echo $this->session->userdata('employee_id');?>">Roster Page
 							</a>
 						</li>
-					
-					
-						<li class="nav-item dropdown mr-3">
+						<li class="nav-item  mr-3">
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadRosterPage">Next Job</a>
 						
-					
+						</li>
+						<li class="nav-item dropdown mr-3">
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadAddReport">Incident Report</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadRosterPage">Log Book</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadFeedback">Feedback</a>
+						</li>
+						<li class="nav-item">
+							<input type="hidden" value="<?php echo $this->session->userdata('employee_id');?>">
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadProfile/?employee_id=<?php echo $this->session->userdata('employee_id');?>">Profile</a>
 						</li>
 						
 					</ul>

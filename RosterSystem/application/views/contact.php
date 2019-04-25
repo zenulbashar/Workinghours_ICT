@@ -1,3 +1,4 @@
+	
 	<!-- banner -->
 	<section class="banner-1">
 	</section>
@@ -6,6 +7,7 @@
 	<section class="contact py-5">
 		<div class="container py-md-4 mt-md-3">
 			<h2 class="heading-agileinfo">Contact Us<span>Speed Up The Work Process</span></h2>
+			<h3> </h3>
 			<span class="w3-line black"></span>
 			<div class="inner-sec-w3layouts-agileinfo mt-md-5 pt-5">
 				<div class="contact-map">
@@ -14,11 +16,13 @@
 				
 				<div class="contact_grid_right mt-5">
 					<h6>Please fill this form to contact with us.</h6>
+					<?php echo validation_errors('<div class="alert alert-danger alert-dismissable">', ' <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>'); ?>
 					<form action="<?php echo base_url()?>index.php/Welcome/insContactUs" method="post">
 						<div class="contact_left_grid">
 							<input type="text" name="name" placeholder="Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
-							<input type="text" name="subject" placeholder="Subject" required="">
+							<input type="text" name="subject" id="subject" placeholder="Subject" required="">
+							
 							<textarea name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
 							<input type="submit" value="Submit">
 							<input type="reset" value="Clear">

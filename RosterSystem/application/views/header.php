@@ -25,6 +25,7 @@
 	<!-- //Custom Theme files -->
 	<!-- online fonts -->
 	<!-- titles -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 	<!-- body -->
 	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
@@ -60,34 +61,29 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav text-center  ml-lg-auto">
-						<li class="nav-item active  mr-3">
+						<li class="nav-item mr-3">
 							<a class="nav-link" href="<?php echo base_url();?>">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item  mr-3">
-							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/">Roster Page
 								
 							</a>
-						</li>
+					
 						<li class="nav-item  mr-3">
 							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadAbout">About Us</a>
 						</li>
 					
 						<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>assets2/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
-								Login Modules
+								Login 
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadCompanyLogin">Are you Company?</a>
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadEmployeeLogin">Are you Employee?</a>
+								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadCompanyLogin">Login As Company</a>
+								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadEmployeeLogin">Login As Employee</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>assets2/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
-								Registration Modules
+								Registration
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/signCompany">Sign-up Company</a>

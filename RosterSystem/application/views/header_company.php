@@ -27,7 +27,7 @@
 	<!-- titles -->
 	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 	<!-- body -->
-	<link href="<?php echo base_url();?>assets2///fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets2// fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
 </head>
 
 <body>
@@ -43,9 +43,17 @@
 							<li> Working Hour(s)</li>
 						</ul>
 					</div>
+					<div class="col-sm-6 top-right">
+						<ul>
+								<li class="nav-item">
+							<li style="float: right;"><a href="<?php echo base_url();?>index.php/Welcome/logout"><i style="font-weight: 900;font-size: xx-large;color: snow;" class="fa fa-power-off"></i></a></li>
+						</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
+	
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<h1>
@@ -60,46 +68,34 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav text-center  ml-lg-auto">
-						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="<?php echo base_url();?>">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
 						<li class="nav-item  mr-3">
-							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/">Roster Page
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/companyView">Company
 								
 							</a>
 						</li>
 						<li class="nav-item  mr-3">
-							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadAbout">About</a>
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadEmployees">Add Roster
+								
+							</a>
+						</li>
+						<li class="nav-item  mr-3">
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadRosterCompany">Add Next Job
+								
+							</a>
 						</li>
 					
+					
 						<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>assets2/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Login Modules
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadCompanyLogin">Are you Company?</a>
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/loadEmployeeLogin">Are you Employee?</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>assets2/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Registration Modules
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/signCompany">Sign-up Company</a>
-								<a class="dropdown-item" href="<?php echo base_url();?>index.php/Welcome/signEmployee">Sign-up Employee</a>
-							</div>
-						</li>
+						
+					
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadContactUs">contact Us</a>
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadViewReport">Read Incidents</a>
 						</li>
+						
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url();?>">Incident Report</a>
+							<a class="nav-link" href="<?php echo base_url();?>index.php/Welcome/loadViewReport">Feedback</a>
 						</li>
+						
 					</ul>
 				</div>
 			</nav>

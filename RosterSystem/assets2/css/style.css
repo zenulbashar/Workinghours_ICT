@@ -1117,7 +1117,8 @@ a.facebook:hover {
 }
 .banner-1 {
     background: url(../images/bg2.jpg)no-repeat;
-    height: 18vw;
+   height: 58vw;
+background-size: cover;
 }
 .w3layouts_bottom {
     background:url(../images/bg3.jpg) no-repeat 0px 0px;
